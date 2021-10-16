@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado AES</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body background="css/Fondo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" ></script>
+    <div class="contenedora">
+        </div>
+        <br>
+        <hr>       
+         <h1>CIFRADO</h1>
+            <br>
+            <table>
+                Seleccione los bits de su clave<br><br>
+                <select name="tipoAES" id="tipo">
+                    
+                    <option value="128">128</option>
+                    
+                    <option value="192">192</option>
+                    
+                    <option value="256">256</option>
+                    
+                </select>
+                <br>
+                <br>
+                <textarea  class="input_text" id="txt" placeholder="Mensaje"></textarea>
+                <br>
+                <input class="input_text" type="txt" placeholder="Clave" id="clave" >
+            <td>
+                <input class="button" type="button" value="Cifrar" onclick="cifrar()">
+                <br>
+                <br>
+                <p><button><a href="index.html">Regresar</a></button></p>
+                <br>
+                <br>
+            </td>
+            <br>
+            <tr>
+                El texto cifrado es:<br>
+                <textarea  class="input_text" id="txtcifrado" placeholder="Texto Cifrado" disabled></textarea>
+            </tr>
+                
+                <br>
+                
+                <p id="txt"></p>
+                
+                <div id="resultado"></div>
+        </table>
+            
+        
+
+    <script src="js/aes.js"></script>
+</body>
+</html>
